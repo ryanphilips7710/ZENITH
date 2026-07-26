@@ -12,6 +12,11 @@ Zenith is a conversational assistant that answers participant questions about IB
 
 The assistant is built as a single Streamlit application, deployable as a public web link, with no backend server or database required beyond the structured event data bundled with the app itself.
 
+## Zenith Demo
+
+https://github.com/user-attachments/assets/6cc24c7b-239b-4cbd-a556-333aab2ccd42
+
+
 ## Problem Statement
 
 IBM Z Summit 2026 expects 500+ participants across technical workshops, hands-on labs, a hackathon, guest speaker sessions, networking activities, and competitions. With an event of this scale, several operational pain points emerge:
