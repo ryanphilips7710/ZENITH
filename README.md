@@ -39,13 +39,13 @@ IBM Z Summit 2026 expects 500+ participants across technical workshops, hands-on
 
 ## Technology Stack
 
-| Layer | Choice | Why |
-|---|---|---|
-| Frontend / App framework | **Streamlit** | Rapid to build, deployable as a public web app with no separate frontend/backend split, ideal for a fast-turnaround project. |
-| Language | **Python 3** | Native fit with Streamlit; simple to reason about and extend. |
-| LLM inference | **Ollama Cloud** (`gpt-oss:20b`) | Hosted inference with no local GPU required. `gpt-oss:20b` was chosen deliberately over larger models — it's a lighter/faster model well-suited to a structured lookup task like this, and it preserves scarce concurrency slots on the hosting plan under simultaneous use, rather than a bigger model that would hold each request longer. |
-| Knowledge grounding | **Structured Python data** (`event_data.py`), injected into the system prompt | A full RAG/vector-store pipeline is unnecessary overhead for a knowledge base this size (a handful of KB of schedule/FAQ text). Context-injection is simpler to build, has fewer moving parts to fail live, and is trivial to update — just edit one file. |
-| Secrets management | `python-dotenv` (local `.env`) / Streamlit Secrets (deployed) | Keeps the Ollama Cloud API key out of source control while working identically in local development and on Streamlit Community Cloud. |
+| Layer | Tools |
+|---|---|
+| Frontend / App framework | **Streamlit** |
+| Language | **Python 3** | 
+| LLM inference | **Ollama Cloud** (`gpt-oss:20b`) |
+| Knowledge grounding | **Structured Python data** (`event_data.py`), injected into the system prompt |
+| Secrets management | `python-dotenv` (local `.env`) |
 
 ## Setup Instructions
 
