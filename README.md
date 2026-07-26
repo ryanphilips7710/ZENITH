@@ -1,4 +1,4 @@
-# README — Zenith: IBM Z Summit 2026 AI Assistant
+# Zenith: IBM Z Summit 2026 AI Assistant
 
 An AI-powered chat assistant built with Python and Streamlit to help participants navigate IBM Z Summit 2026, grounded in real event data and served via Ollama Cloud.
 
@@ -41,7 +41,6 @@ IBM Z Summit 2026 expects 500+ participants across technical workshops, hands-on
 | LLM inference | **Ollama Cloud** (`gpt-oss:20b`) | Hosted inference with no local GPU required. `gpt-oss:20b` was chosen deliberately over larger models — it's a lighter/faster model well-suited to a structured lookup task like this, and it preserves scarce concurrency slots on the hosting plan under simultaneous use, rather than a bigger model that would hold each request longer. |
 | Knowledge grounding | **Structured Python data** (`event_data.py`), injected into the system prompt | A full RAG/vector-store pipeline is unnecessary overhead for a knowledge base this size (a handful of KB of schedule/FAQ text). Context-injection is simpler to build, has fewer moving parts to fail live, and is trivial to update — just edit one file. |
 | Secrets management | `python-dotenv` (local `.env`) / Streamlit Secrets (deployed) | Keeps the Ollama Cloud API key out of source control while working identically in local development and on Streamlit Community Cloud. |
-| Styling | Custom CSS (Google Fonts: Syne, Space Mono) | Gives the app a distinct visual identity beyond Streamlit's default look. |
 
 ## Setup Instructions
 
@@ -81,7 +80,6 @@ All event-specific content — schedule, venue info, FAQs, speaker bios — live
 
 ## Future Scope
 
-- **Live registration/attendance integration** — tie the assistant into a real participant database for deeper personalization (e.g. "your team's next hackathon checkpoint").
 - **Multilingual support** for non-English-speaking participants.
 - **Human escalation path** — a button that pings a volunteer (e.g. via Telegram) when the assistant can't answer a question.
 - **FAQ caching layer** — answer exact-match common questions directly from `event_data.py` without an LLM call, further reducing latency and backend load during peak concurrent usage.
