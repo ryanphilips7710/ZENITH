@@ -22,7 +22,7 @@ https://github.com/user-attachments/assets/6cc24c7b-239b-4cbd-a556-333aab2ccd42
 IBM Z Summit 2026 expects 500+ participants across technical workshops, hands-on labs, a hackathon, guest speaker sessions, networking activities, and competitions. With an event of this scale, several operational pain points emerge:
 
 - Volunteers are repeatedly asked the same questions (schedule, venue, WiFi, certificates), pulling them away from higher-value tasks.
-- Printed schedules and static FAQ sheets go stale the moment something changes and don't scale to hundreds of simultaneous questions.
+- Printed schedules and static FAQ sheets go stale the moment something changes.
 - Participants have no single, always-available source of truth for logistics during the event.
 
 **Chosen problem area:** AI Powered Event Assistant — building a reliable, always-on assistant that answers participant questions instantly, freeing up volunteer time and improving the overall participant experience.
@@ -33,9 +33,8 @@ IBM Z Summit 2026 expects 500+ participants across technical workshops, hands-on
 - **Grounded, non-hallucinating answers** — the assistant is instructed to answer only from real event data (schedule, venue info, FAQs, speaker bios) and to say plainly "I don't have that info" rather than invent details like room numbers or times.
 - **Personalized schedule lookup** — participants can optionally select their track, and ask things like "what's my next session?"; the assistant resolves this against the current time and the live schedule.
 - **First-load suggested questions** — a grid of tappable, frequently-asked questions (next session, venue/help desk, WiFi, certificate process, food, hackathon info) so a first-time visitor sees what they can ask instead of facing a blank chat box.
-- **Collapsible sidebar** — a custom show/hide toggle for the configuration panel (track selector, clear chat, live message/token counters), built with Streamlit session state rather than relying on the framework's default (and version-inconsistent) sidebar control.
 - **Resilient fallback handling** — if the AI backend is unreachable or errors out, the app shows a friendly fallback message pointing the participant to a volunteer or the help desk, instead of crashing or exposing a raw error.
-- **Dark, custom-themed UI** — a distinct visual identity (custom fonts, color palette, styled chat bubbles) built entirely with CSS layered over Streamlit's default components.
+- **Dark, custom-themed UI** — a distinct visual identity built entirely with CSS layered over Streamlit's default components.
 
 ## Technology Stack
 
