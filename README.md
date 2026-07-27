@@ -68,7 +68,7 @@ OLLAMA_API_KEY=your-real-key-here
 ```bash
 streamlit run app.py
 ```
-The app opens at `http://localhost:8501`.
+Run the command in the terminal. The app opens at `http://localhost:8501`.
 
 ### 5. Deploy (optional)
 Push the repo to GitHub, then deploy on [Streamlit Community Cloud](https://share.streamlit.io):
